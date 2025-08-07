@@ -35,9 +35,9 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
 
-      - run: echo ${{ toJson(github.event) }}
+      - run: echo "${{ toJson(github.event) }}"
 
-      - run: echo ${{ github.event.issue.pull_request.url || github.event.pull_request.url }}
+      - run: echo "${{ github.event.issue.pull_request.url || github.event.pull_request.url }}"
 
       - run: |
           if [ ${{ github.event.issue.pull_request || github.event.pull_request }} ]; then
